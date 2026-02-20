@@ -10,6 +10,10 @@ int main()
     float areaCartaA, areaCartaB;
     float pibA, pibB;
     int pontosTuristicosA, pontosTuristicosB;
+    float densidadePopulacionalA = (float)populacaoA / areaCartaA;
+    float densidadePopulacionalB = (float)populacaoB / areaCartaB;
+    float pibPerCapitaA = pibA * 1000000000 / populacaoA;
+    float pibPerCapitaB = pibB * 1000000000 / populacaoB;
    
 
     // carta A
@@ -69,10 +73,7 @@ int main()
     scanf("%d", &pontosTuristicosB);
 
 
-    float densidadePopulacionalA = areaCartaA/populacaoA;
-    float densidadePopulacionalB = areaCartaB/populacaoB;
-    float pibPerCapitaA = pibA/populacaoA;
-    float pibPerCapitaB = pibB/populacaoB;
+   
  
     // Saida de dados
     //carta A
