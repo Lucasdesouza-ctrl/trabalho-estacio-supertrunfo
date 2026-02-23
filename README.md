@@ -15,6 +15,9 @@ Cada carta armazena as seguintes informações:
 - Área territorial
 - PIB
 - Número de pontos turísticos
+- Densidade populacional
+- PIB per capita
+- Super poder (soma e subtração de atributos)
 
 Após a inserção dos dados, o sistema exibe todas as informações cadastradas na tela.
 
@@ -34,6 +37,7 @@ O programa é composto por:
 - Declaração de variáveis para duas cartas (Carta A e Carta B)
 - Entrada de dados via teclado utilizando scanf e fgets
 - Exibição formatada das informações utilizando printf
+- Operações matemáticas para soma de atributos e comparação entre eles
 
 ---
 
@@ -67,7 +71,7 @@ programa.exe
 
 1. O usuário insere os dados da Carta A.
 2. O usuário insere os dados da Carta B.
-3. O programa exibe os dados das duas cartas formatados na tela.
+3. O programa exibe os dados e a comparação das duas cartas formatados na tela.
 
 ---
 
@@ -80,6 +84,7 @@ Este trabalho tem como objetivo praticar:
 - Entrada e saída de dados
 - Uso de tipos primitivos (`int`, `float`, `char`)
 - Organização básica de um programa em C
+- Uso de operadores matemáticos e lógicos
 
 ---
 
