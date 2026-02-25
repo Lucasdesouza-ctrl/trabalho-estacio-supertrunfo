@@ -1,25 +1,21 @@
-# 📄 Cadastro e Exibição de Cartas em C
+# Cadastro e Comparação de Cartas em C
 
-##  Descrição
+## Descrição
 
-Este projeto foi desenvolvido como trabalho acadêmico para a disciplina de Introdução a Programação de Computadores.
+Este projeto foi desenvolvido como trabalho acadêmico para a disciplina de Introdução à Programação de Computadores.
 
-O programa realiza o cadastro de duas cartas contendo informações sobre cidades brasileiras, simulando um modelo simples inspirado em jogos de cartas.
+O programa realiza o cadastro de duas cartas contendo informações sobre países e permite a comparação entre elas com base em um atributo escolhido pelo usuário.
 
 Cada carta armazena as seguintes informações:
 
-- Estado (letra representativa)
-- Código da carta
-- Nome da cidade
+- Nome do país
 - População
-- Área territorial
-- PIB
+- Área territorial (km²)
+- PIB (em bilhões de reais)
 - Número de pontos turísticos
-- Densidade populacional
-- PIB per capita
-- Super poder (soma e subtração de atributos)
+- Densidade populacional (calculada automaticamente)
 
-Após a inserção dos dados, o sistema exibe todas as informações cadastradas na tela.
+Após a inserção dos dados, o sistema exibe todas as informações cadastradas e apresenta um menu para comparação.
 
 ---
 
@@ -28,22 +24,49 @@ Após a inserção dos dados, o sistema exibe todas as informações cadastradas
 - Linguagem C
 - Biblioteca padrão:
   - stdio.h
+
 ---
 
-##  Estrutura do Programa
+## Estrutura do Programa
 
 O programa é composto por:
 
 - Declaração de variáveis para duas cartas (Carta A e Carta B)
 - Entrada de dados via teclado utilizando scanf e fgets
+- Limpeza de buffer com getchar para evitar problemas na leitura de strings
+- Cálculo automático da densidade populacional:
+
+```
+densidade = população / área
+```
+
+- Cálculo do PIB formatado em valor absoluto (multiplicado por 1.000.000.000)
 - Exibição formatada das informações utilizando printf
-- Operações matemáticas para soma de atributos e comparação entre eles
+- Menu interativo para escolha de comparação
+- Estrutura switch para determinar qual atributo será comparado
+- Estruturas condicionais (if/else) para definir a carta vencedora ou empate
 
 ---
 
-##  Como Compilar e Executar
+## Critérios de Comparação
 
-###  Compilar
+O usuário pode escolher comparar:
+
+1. População  
+2. Área  
+3. PIB  
+4. Número de pontos turísticos  
+5. Densidade populacional  
+
+Regra específica:
+
+Na comparação de densidade populacional, vence a carta com menor densidade, pois representa menor concentração populacional.
+
+---
+
+## Como Compilar e Executar
+
+### Compilar
 
 No terminal, utilize:
 
@@ -51,9 +74,9 @@ No terminal, utilize:
 gcc nome_do_arquivo.c -o programa
 ```
 
-###  Executar
+### Executar
 
-No Linux/Mac:
+No Linux ou Mac:
 
 ```bash
 ./programa
@@ -67,11 +90,14 @@ programa.exe
 
 ---
 
-##  Funcionamento
+## Funcionamento
 
 1. O usuário insere os dados da Carta A.
 2. O usuário insere os dados da Carta B.
-3. O programa exibe os dados e a comparação das duas cartas formatados na tela.
+3. O programa calcula automaticamente a densidade populacional.
+4. As informações das duas cartas são exibidas na tela.
+5. O usuário escolhe um critério de comparação.
+6. O sistema informa qual carta venceu ou se houve empate.
 
 ---
 
@@ -79,16 +105,19 @@ programa.exe
 
 Este trabalho tem como objetivo praticar:
 
-- Declaração de variáveis
+- Declaração e uso de variáveis
 - Manipulação de strings
 - Entrada e saída de dados
-- Uso de tipos primitivos (`int`, `float`, `char`)
+- Uso de tipos primitivos (int, float, char)
+- Estruturas condicionais (if/else)
+- Estrutura de seleção (switch)
+- Operações matemáticas
 - Organização básica de um programa em C
-- Uso de operadores matemáticos e lógicos
+- Lógica de comparação entre dados
 
 ---
 
 ## Aluno
 
 Lucas Alexandre de Souza  
-Trabalho acadêmico – Introdução a Programação de Computadores
+Trabalho acadêmico – Introdução à Programação de Computadores
